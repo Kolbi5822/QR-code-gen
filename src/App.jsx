@@ -7,7 +7,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/kolbi-portfolio" index element={<Home />}/>
+          <Route path="/QR-code-gen" index element={<Home />}/>
           <Route path="*" element={<NotFound />}/>
         </Routes>
       </BrowserRouter>
