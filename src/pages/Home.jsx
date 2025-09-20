@@ -10,20 +10,15 @@ import { HomeSection } from "../components/HomeSection";
 export const Home = () => {
     return <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
 
-        {/* Background Effects */}
-        <StarBackground />
         {/* Navbar */}
         <Navbar />
+        
         {/* Main Content */}
         <main>
             <HomeSection />
-            <AboutSection />
-            <SkillsSection />
-            <ProjectsSection />
-            <ContactSection />
         </main>
-        {/* Footer */}
 
+        {/* Footer */}
         <Footer />
     </div>;
 }

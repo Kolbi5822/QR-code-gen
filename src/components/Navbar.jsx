@@ -3,54 +3,36 @@ import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const navItems = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
+  {
+    name: "Portfolio Site",
+    href: "https://Kolbi5822.github.io/kolbi-portfolio/",
+  },
 ];
 
 export const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <>
-      <nav
-        className={cn(
-          "fixed w-full z-50 transition-all duration-300",
-          isScrolled
-            ? "py-3 bg-background/80 backdrop-blur-md shadow-xs"
-            : "py-5"
-        )}
-      >
+      <nav className="fixed w-full z-50 transition-all duration-300 py-5">
         <div className="container flex items-center justify-between">
           <a
             className="text-xl font-bold text-primary flex items-center"
-            href="#home"
+            href=""
           >
             <span className="relative z-10">
               <span className="text-glow text-foreground"> Kolbi's </span>
-              Portfolio
+              QR Code
+              <span className="text-glow text-foreground"> Generator </span>
             </span>
           </a>
-
           {/* desktop nav */}
           <div className="hidden md:flex space-x-8">
             {navItems.map((item, key) => (
               <a
                 key={key}
                 href={item.href}
+                target="_blank"
                 className="text-foreground/80 hover:text-primary transition-colors duration-300"
               >
                 {item.name}

@@ -2,7 +2,7 @@ import { ArrowUp, Linkedin, Github, Mail } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <footer className="py-4 px-4 bg-card relative border-t border-border mt-12 pt-3 flex flex-wrap justify-between items-center">
+    <footer className="fixed w-full bottom-0 py-4 px-4 bg-card border-t border-border mt-12 pt-3 flex flex-wrap justify-between items-center">
       {" "}
       <div className="flex space-x-3">
         <a
@@ -31,12 +31,6 @@ export const Footer = () => {
         {" "}
         Kolbi Lee &copy; {new Date().getFullYear()}
       </p>
-      <a
-        href="#home"
-        className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
-      >
-        <ArrowUp size={20} />
-      </a>
     </footer>
   );
 };
